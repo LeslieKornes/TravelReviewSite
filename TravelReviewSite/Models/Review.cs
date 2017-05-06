@@ -11,6 +11,8 @@ namespace TravelReviewSite.Models
 
         [Display(Name = "User Name")]
         public string UserName { get; set; }
+        [Display(Name = "Venue")]
+        public string Title { get; set; }
         [Display(Name = "Date")]
         [DisplayFormat(DataFormatString = "{0:M/d/yyyy}")]
         public DateTime PublishedDate { get; set; }
