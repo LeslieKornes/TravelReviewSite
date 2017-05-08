@@ -4,20 +4,20 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Reviews</h2>
+<h2 class="reviewTitle">Reviews</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create",null, new { @class = "reviewCreation" })
 </p>
 <div class="row">
     @foreach (var item in Model)
     {
-        <div class="col-sm-6 col-md-4">
+        <div class="col-sm-6 col-md-3">
             <div class="thumbnail">
-                <div class="text-center caption">
-                    <h3>@Html.DisplayFor(modelItem => item.UserName)</h3>
-                    <p>@Html.DisplayFor(modelItem => item.Title)</p>
-                    <p>@Html.ActionLink("View Details", "Details", new { id = item.ID }, new { role = "button", @class = "btn btn-primary" }) </p>
+                <div class="text-center caption reviewBlocks">
+                    <h3 class="displayForText">@Html.DisplayFor(modelItem => item.UserName)</h3>
+                    <p class="displayForText">@Html.DisplayFor(modelItem => item.Title)</p>
+                    <p>@Html.ActionLink("View Details", "Details", new { id = item.ID }, new { role = "button", @class = "btn btn-primary buttonColor" }) </p>
 
                 </div>
             </div>
